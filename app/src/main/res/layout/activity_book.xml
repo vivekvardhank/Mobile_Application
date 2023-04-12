@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookActivity">
+
+    <GridView
+        android:id="@+id/bookGridView"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="1dp"
+        android:background="#e5e5e5"
+        android:horizontalSpacing="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </GridView>
+
+    <!--<TextView
+        android:id="@+id/bookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp"
+        android:text="Book 1"
+        android:textColor="#000"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/bookImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/book2"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bookName"
+        android:layout_marginTop="27dp"
+        tools:ignore="MissingConstraints" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
