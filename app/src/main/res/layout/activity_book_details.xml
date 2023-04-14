@@ -6,14 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".activities.BookDetailsActivity">
 
+    <ImageView
+        android:id="@+id/bookDetailsImage"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/book2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="54dp" />
+
     <TextView
+        android:id="@+id/bookDetailsName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp"
-        android:text="Book 1"
-        android:textColor="#000"
-        android:textSize="30dp"
+        android:paddingTop="20dp"
+        android:textSize="40dp"
+        android:textStyle="normal|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookDetailsImage"
+        app:layout_constraintVertical_bias="0.178"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="144dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="232dp"
+        android:text="Add to cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookDetailsImage" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="393dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="164dp"
+        android:text="Description: about the book"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookDetailsImage" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="59dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cart" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="144dp"
+        android:layout_height="78dp"
+        android:text="Buy now"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookDetailsImage"
+        app:layout_constraintVertical_bias="0.766" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

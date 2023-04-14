@@ -8,13 +8,13 @@
 
     <GridView
         android:id="@+id/bookGridView"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="1dp"
-        android:background="#e5e5e5"
-        android:horizontalSpacing="1dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </GridView>
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:horizontalSpacing="18dp"
+        android:verticalSpacing="18dp"
+        android:padding="14dp"
+        android:scrollbars="vertical" />
 
     <!--<TextView
         android:id="@+id/bookName"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="105dp"
-        android:text="Book 1"
+        android:text="products"
         android:textColor="#000"
         android:textSize="30dp"
         tools:ignore="MissingConstraints" />
