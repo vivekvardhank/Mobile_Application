@@ -1,5 +1,6 @@
 package com.example.myapplication.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -36,11 +37,14 @@ class SignupActivity : AppCompatActivity() {
                 runOnIO {
                     if (userDetailsDao.isUserNamePresent(userName)) {
                         isAllowed = false
-                        Toast.makeText(
-                            applicationContext,
-                            "Already present in database",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        runOnUiThread {
+                            Toast.makeText(
+                                applicationContext,
+                                "Already present in database",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
                     } else {
                         isAllowed = true
                     }
@@ -61,6 +65,8 @@ class SignupActivity : AppCompatActivity() {
                                 )
                             )
                             println("User details saved.")
+                           val intent = Intent(this@SignupActivity, LoginActivity::class.java)
+                           startActivity(intent)
                         }
                         } else{
                             Toast.makeText(applicationContext,"Password doesn't match",Toast.LENGTH_LONG).show()

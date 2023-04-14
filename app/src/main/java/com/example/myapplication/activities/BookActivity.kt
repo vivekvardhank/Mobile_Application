@@ -9,8 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
 import com.example.myapplication.adapter.BookAdapter
-import com.example.myapplication.databinding.ActivityBookBinding
-import com.example.myapplication.entities.UserDetailsDao
 import com.example.myapplication.model.Book
 
 class BookActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
@@ -26,7 +24,7 @@ class BookActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
         arrayList = setDataList()
         bookAdapter = BookAdapter(applicationContext, arrayList!!)
         gridView?.adapter = bookAdapter
-        gridView?.onItemClickListener=this
+        gridView?.onItemClickListener = this
 //        gridView?.setOnClickListener(object: View.OnClickListener {
 //            override fun onClick(p0: View?) {
 //                val intent= Intent(applicationContext,BookDetailsActivity::class.java)
@@ -40,21 +38,27 @@ class BookActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     private fun setDataList(): ArrayList<Book> {
         var bookList: ArrayList<Book> = ArrayList()
-//        bookList.add(Book("AI",R.drawable.ai))
-//        bookList.add(Book("Database",R.drawable.database))
-//        bookList.add(Book("Pocket Book",R.drawable.pocketbook))
+        bookList.add(Book("The Alchemist", R.drawable.alchemist))
+        bookList.add(Book("His Name is George Floyd", R.drawable.hisnameis))
+        bookList.add(Book("UAB SweatShirt", R.drawable.uabsweatshirt))
+        bookList.add(Book("UAB T Shirt", R.drawable.uabtshirt))
         bookList.add(Book("Web App Dev", R.drawable.webappdev))
         bookList.add(Book("Rule Book", R.drawable.book2))
-
+        bookList.add(Book("Design How People Learn", R.drawable.designhowpeoplelearn))
+        bookList.add(Book("Cloud Computing", R.drawable.cloudcomputing))
+        bookList.add(Book("Information Security", R.drawable.informationsecurity))
+        bookList.add(Book("UAB Hoodie", R.drawable.sweatshirt))
+        bookList.add(Book("UAB Silver Pendant", R.drawable.uabpendant))
         return bookList
     }
 
     override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
         var items: Book = arrayList!!.get(p2)
         Toast.makeText(applicationContext, items.bookName, Toast.LENGTH_LONG).show()
-        val intent= Intent(applicationContext,BookDetailsActivity::class.java)
-        intent.putExtra("name", arrayList!!.get(0).bookName)
-        intent.putExtra("Image", arrayList!!.get(0).bookImage)
+        val intent = Intent(applicationContext, BookDetailsActivity::class.java)
+        intent.putExtra("name", arrayList!!.get(p2).bookName)
+        intent.putExtra("Image", arrayList!!.get(p2).bookImage)
         startActivity(intent)
+
     }
 }
