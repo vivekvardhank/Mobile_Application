@@ -52,7 +52,7 @@
         android:layout_width="393dp"
         android:layout_height="32dp"
         android:layout_marginTop="164dp"
-        android:text="Description: about the book"
+        android:text="Description: About the product"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

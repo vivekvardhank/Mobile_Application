@@ -44,11 +44,13 @@ class LoginActivity : AppCompatActivity() {
                             startActivity(intent)
                         }
                     } else {
-                        Toast.makeText(
-                            applicationContext,
-                            "User Details are wrong try again",
-                            Toast.LENGTH_LONG
-                        ).show()
+                        runOnUiThread {
+                            Toast.makeText(
+                                applicationContext,
+                                "User Details are wrong try again",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
                     }
                 }
             }

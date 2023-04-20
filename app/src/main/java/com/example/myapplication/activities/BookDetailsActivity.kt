@@ -21,5 +21,12 @@ class BookDetailsActivity : AppCompatActivity() {
         textView!!.setText(intent?.getStringExtra("name"))
         intent?.getIntExtra("Image",0)?.let { imageView!!.setImageResource(it) }
 
+        val cartImageView: ImageView = findViewById(R.id.imageView2)
+        cartImageView.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }
